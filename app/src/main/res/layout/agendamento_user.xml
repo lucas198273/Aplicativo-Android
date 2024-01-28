@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_background"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:src="@drawable/baner_tatto"/>
+
+        <EditText android:id="@+id/edit_nome_completo"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/txt_hint__edit_nome"
+            android:textColorHint="#5E5E9E"
+            android:textColor="@color/black"
+            android:background="@drawable/bg_button_enable"
+            android:maxLines="1"
+            android:inputType="textPersonName"
+            android:padding="15dp"
+            android:layout_marginTop="20dp"
+            android:importantForAutofill="no" />
+        <EditText android:id="@+id/edit_telefone"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/txt_hint__edit_telefone"
+            android:textColorHint="#5E5E9E"
+            android:textColor="@color/black"
+            android:background="@drawable/bg_button_enable"
+            android:maxLines="1"
+            android:inputType="phone"
+            android:padding="15dp"
+            android:layout_marginTop="20dp"
+            android:importantForAutofill="no" />
+        <EditText android:id="@+id/edit_tipoServico"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+           android:hint="@string/txt_hint__edit_tipo_servico"
+            android:textColorHint="#5E5E9E"
+            android:textColor="@color/black"
+            android:background="@drawable/bg_button_enable"
+            android:maxLines="1"
+            android:inputType="text"
+            android:padding="15dp"
+            android:layout_marginTop="20dp"
+            android:importantForAutofill="no" />
+        <TextView
+            android:layout_width="350dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="Selecione um Serviço"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+        <Spinner
+            android:id="@+id/btSpinner"
+            android:layout_width="350dp"
+            android:layout_height="48dp"
+            android:backgroundTint="@color/white" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="15dp">
+            <Button android:id="@+id/btLimpar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Limpar"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:layout_margin="20dp"
+                android:backgroundTint="@color/roxo"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:padding="15dp"/>
+            <Button android:id="@+id/btLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_button_finalizar"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:layout_margin="20dp"
+                android:backgroundTint="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:padding="15dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
