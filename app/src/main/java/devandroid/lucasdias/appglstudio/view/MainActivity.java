@@ -19,6 +19,9 @@ public class MainActivity extends AppCompatActivity {
     EditText edit_senha_user;
     Button btLogin;
 
+    String senhaCadastrada = "lucas";
+     /*Toast.makeText(AgendamentoActivity.this, "Cadastro realizado " + agendamentoUsuario.getNomeDoUsuario(), Toast.LENGTH_LONG).show();*/
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,15 +48,16 @@ public class MainActivity extends AppCompatActivity {
             }
 
             if (isCampoOk) {
-                String nomeCadastrado = "lucas";
-                if (edit_nome_user.getText().toString().trim().equalsIgnoreCase(nomeCadastrado)) {
+
+                if (edit_senha_user.getText().toString().trim().equalsIgnoreCase(senhaCadastrada)) {
                     // Lógica para login bem-sucedido
                     Intent intent = new Intent(MainActivity.this, AgendamentoActivity.class);
                     startActivity(intent);
                 } else {
-                    // Feedback ao usuário quando o nome do usuário não corresponde
-                    Toast.makeText(MainActivity.this, "Nome de usuário incorreto", Toast.LENGTH_LONG).show();
+                    // Feedback ao usuário quando a senha não corresponde
+                    Toast.makeText(MainActivity.this, "Senha incorreta", Toast.LENGTH_LONG).show();
                 }
+
             } else {
                 // Toast para campos vazios (talvez seja útil apenas no desenvolvimento)
                 Toast.makeText(MainActivity.this, MainController.menssagemErroCampoVazio(), Toast.LENGTH_LONG).show();
