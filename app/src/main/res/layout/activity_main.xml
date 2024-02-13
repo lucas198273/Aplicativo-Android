@@ -23,12 +23,12 @@
                     app:strokeColor="#673AB7"
                     app:strokeWidth="10dp">
 
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:importantForAccessibility="no"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/bemvindo" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:importantForAccessibility="no"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bemvindo" />
 
                 </com.google.android.material.card.MaterialCardView>
 
@@ -62,7 +62,7 @@
                     android:importantForAutofill="no" />
 
                 <Button android:id="@+id/btLogin"
-                    android:layout_width="320dp"
+                    android:layout_width="350dp"
                     android:layout_height="wrap_content"
                     android:text="@string/btn_login"
                     android:textSize="18sp"

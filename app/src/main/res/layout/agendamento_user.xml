@@ -7,21 +7,38 @@
     android:fillViewport="true">
 
 
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/shape_background"
+        android:background="@drawable/shape_background_abertura"
         android:orientation="vertical"
         android:gravity="center"
         android:paddingStart="40dp"
         android:paddingEnd="40dp"
         tools:context=".MainActivity">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="280dp"
-            android:src="@drawable/baner_tatto"/>
 
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="350dp"
+            android:layout_height="300dp"
+            android:layout_margin="16dp"
+            app:cardBackgroundColor=""
+            app:cardCornerRadius ="80dp"
+            app:cardElevation="4dp"
+            app:strokeColor="#0C0517"
+            app:strokeWidth="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo_latfy"/>
+
+        </com.google.android.material.card.MaterialCardView>
         <EditText android:id="@+id/edit_nome_completo"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
