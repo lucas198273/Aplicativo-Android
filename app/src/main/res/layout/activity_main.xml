@@ -10,69 +10,60 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
-        android:background="@drawable/shape_background"
-
-        >
-        <com.google.android.material.card.MaterialCardView
-                    android:layout_width="350dp"
-                    android:layout_height="300dp"
-                    android:layout_margin="16dp"
-                    app:cardBackgroundColor="#1D024C"
-                    app:cardCornerRadius ="80dp"
-                    app:cardElevation="4dp"
-                    app:strokeColor="#673AB7"
-                    app:strokeWidth="10dp">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:importantForAccessibility="no"
-                android:scaleType="centerCrop"
-                android:src="@drawable/bemvindo" />
-
-                </com.google.android.material.card.MaterialCardView>
+        android:background="@drawable/shape_background_abertura">
 
 
-                <EditText
-                    android:id="@+id/edit_nome_user"
-                    android:layout_width="300dp"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/txt_hint__edit_nome"
-                    android:textColorHint="#686D8A"
-                    android:background="@drawable/bg_button_enable"
-                    android:maxLines="1"
-                    android:inputType="text"
-                    android:padding="15dp"
-                    android:layout_marginTop="20dp"
-                    android:textColor="@color/black"
-                    android:importantForAutofill="no" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="400dp"
+            android:src="@drawable/logo_main">
 
-                <EditText
-                    android:id="@+id/edit_senha_user"
-                    android:layout_width="300dp"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/txt_senha"
-                    android:textColorHint="#686D8A"
-                    android:background="@drawable/bg_button_enable"
-                    android:maxLines="1"
-                    android:inputType="text"
-                    android:padding="15dp"
-                    android:textColor="@color/black"
-                    android:layout_marginTop="20dp"
-                    android:importantForAutofill="no" />
+        </ImageView>
 
-                <Button android:id="@+id/btLogin"
-                    android:layout_width="350dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/btn_login"
-                    android:textSize="18sp"
-                    android:textColor="@color/white"
-                    android:backgroundTint="@color/black"
-                    android:textStyle="bold"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:padding="15dp"/>
-            </LinearLayout>
+
+
+
+
+        <EditText
+            android:id="@+id/edit_nome_user"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/txt_hint__edit_nome"
+            android:textColorHint="#F1F2F4"
+            android:background="@drawable/bg_button_enable"
+            android:maxLines="1"
+            android:inputType="text"
+            android:padding="15dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/edit_senha_user"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/txt_senha"
+            android:textColorHint="#F6F6FA"
+            android:background="@drawable/bg_button_enable"
+            android:maxLines="1"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            android:importantForAutofill="no" />
+
+        <Button android:id="@+id/btLogin"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_login"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:padding="15dp"/>
+    </LinearLayout>
 
 
 </ScrollView>

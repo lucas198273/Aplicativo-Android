@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/shape_background_abertura"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:fillViewport="true">
 
@@ -12,7 +13,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/shape_background_abertura"
+        android:background="@drawable/fundo"
         android:orientation="vertical"
         android:gravity="center"
         android:paddingStart="40dp"
@@ -20,31 +21,17 @@
         tools:context=".MainActivity">
 
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_main" />
 
-
-
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="350dp"
-            android:layout_height="300dp"
-            android:layout_margin="16dp"
-            app:cardBackgroundColor=""
-            app:cardCornerRadius ="80dp"
-            app:cardElevation="4dp"
-            app:strokeColor="#0C0517"
-            app:strokeWidth="10dp">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/logo_latfy"/>
-
-        </com.google.android.material.card.MaterialCardView>
         <EditText android:id="@+id/edit_nome_completo"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:hint="@string/txt_hint__edit_nome"
-            android:textColorHint="#5E5E9E"
-            android:textColor="@color/black"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
             android:background="@drawable/bg_button_enable"
             android:maxLines="1"
             android:inputType="textPersonName"
@@ -55,7 +42,7 @@
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:hint="@string/txt_hint__edit_telefone"
-            android:textColorHint="#5E5E9E"
+            android:textColorHint="@color/white"
             android:textColor="@color/black"
             android:background="@drawable/bg_button_enable"
             android:maxLines="1"
@@ -66,8 +53,8 @@
         <EditText android:id="@+id/edit_tipoServico"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
-           android:hint="@string/txt_hint__edit_tipo_servico"
-            android:textColorHint="#5E5E9E"
+            android:hint="@string/txt_hint__edit_tipo_servico"
+            android:textColorHint="@color/white"
             android:textColor="@color/black"
             android:background="@drawable/bg_button_enable"
             android:maxLines="1"
