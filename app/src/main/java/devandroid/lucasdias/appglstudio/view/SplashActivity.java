@@ -25,7 +25,7 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                AgendamentoConfirmado novoAgendamento = new AgendamentoConfirmado("João Lobato", "123456789", "Corte de Cabelo");
+                AgendamentoConfirmado novoAgendamento = new AgendamentoConfirmado("João Lobato", "123456789", "tatuagem");
 
                 AgendamentoDb db = new AgendamentoDb(SplashActivity.this);
                 long resultado = db.inserirAgendamento(novoAgendamento);
