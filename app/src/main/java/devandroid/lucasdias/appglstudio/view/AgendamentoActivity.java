@@ -1,5 +1,7 @@
 package devandroid.lucasdias.appglstudio.view;
 
+import android.content.Intent;
+import android.nfc.Tag;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -10,6 +12,8 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.tabs.TabLayout;
 
 import java.util.List;
 
@@ -31,8 +35,9 @@ public class AgendamentoActivity extends AppCompatActivity {
     Button btLimpar;
     AgendamentoConfirmado agendamentoUsuario;
     Spinner spinner;
-/*    Bundle bundle = getIntent().getExtras();*/
+
     String nomeUsuario;
+    String TAG = "AppGlStudio";
 
     // Verificando se o Bundle não é nulo e contém dados específicos
 
@@ -42,19 +47,23 @@ public class AgendamentoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.agendamento_user);
 
-   /*     Bundle bundle = getIntent().getExtras();
+        Log.d("teste","point 2 ");
+        Intent intent = getIntent();
+        Bundle bundle = intent.getBundleExtra("nome_usuario");
+
+
 
         if (bundle != null) {
-            Log.d("bundle nao nulo", "bundle nao nulo");
+            Log.d(TAG, "bundle nao nulo");
 
             // Exemplo: Verificando se a chave é a correta ("nome")
-            if (bundle.containsKey("nome")) {
-                nomeUsuario = bundle.getString("nome");
+            if (bundle.containsKey("nome_usuario")) {
+                nomeUsuario = bundle.getString("nome_usuario");
                 nomeCompleto.setText(nomeUsuario);
 
                 Toast.makeText(AgendamentoActivity.this, "Cadastro realizado, bem-vindo " + nomeUsuario, Toast.LENGTH_LONG).show();
             }
-        }*/
+        }
 
         // Inicializa os controladores antes de utilizá-los
         controller = new AgendamentoController(AgendamentoActivity.this);

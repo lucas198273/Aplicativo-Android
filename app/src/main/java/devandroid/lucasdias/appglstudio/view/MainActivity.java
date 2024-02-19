@@ -3,8 +3,10 @@ package devandroid.lucasdias.appglstudio.view;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -19,7 +21,8 @@ public class MainActivity extends AppCompatActivity {
     EditText edit_nome_user;
     EditText edit_senha_user;
     Button btLogin;
-  /*  Bundle bundle;*/
+    String TAG = "AppGlStudio";
+
 
     String senhaCadastrada = "lucas";
      /*Toast.makeText(AgendamentoActivity.this, "Cadastro realizado " + agendamentoUsuario.getNomeDoUsuario(), Toast.LENGTH_LONG).show();*/
@@ -57,10 +60,10 @@ public class MainActivity extends AppCompatActivity {
                     String senha = edit_senha_user.getText().toString();
                     usuario = instanciarUsuario(nome,senha);
                     Intent intent = new Intent(MainActivity.this, AgendamentoActivity.class);
-                  /*  bundle = new Bundle();
-                    bundle.putString("nome",usuario.getNomeUsuario());
-
-                    intent.putExtras(bundle);*/
+                    Bundle bundle =  new Bundle();
+                    bundle.putString("nome_usuario", usuario.getNomeUsuario());
+                    intent.putExtras(bundle);
+                    Log.d(TAG,"point 1 ");
                     startActivity(intent);
                 } else {
                     // Feedback ao usuário quando a senha não corresponde
