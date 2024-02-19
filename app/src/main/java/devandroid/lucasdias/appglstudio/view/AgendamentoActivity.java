@@ -1,6 +1,7 @@
 package devandroid.lucasdias.appglstudio.view;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -30,11 +31,30 @@ public class AgendamentoActivity extends AppCompatActivity {
     Button btLimpar;
     AgendamentoConfirmado agendamentoUsuario;
     Spinner spinner;
+/*    Bundle bundle = getIntent().getExtras();*/
+    String nomeUsuario;
+
+    // Verificando se o Bundle não é nulo e contém dados específicos
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.agendamento_user);
+
+   /*     Bundle bundle = getIntent().getExtras();
+
+        if (bundle != null) {
+            Log.d("bundle nao nulo", "bundle nao nulo");
+
+            // Exemplo: Verificando se a chave é a correta ("nome")
+            if (bundle.containsKey("nome")) {
+                nomeUsuario = bundle.getString("nome");
+                nomeCompleto.setText(nomeUsuario);
+
+                Toast.makeText(AgendamentoActivity.this, "Cadastro realizado, bem-vindo " + nomeUsuario, Toast.LENGTH_LONG).show();
+            }
+        }*/
 
         // Inicializa os controladores antes de utilizá-los
         controller = new AgendamentoController(AgendamentoActivity.this);
@@ -70,7 +90,7 @@ public class AgendamentoActivity extends AppCompatActivity {
                 agendamentoUsuario.setTelefoneContato(telefone.getText().toString());
                 agendamentoUsuario.setTipoServico(tipoServico.getText().toString());
 
-                Toast.makeText(AgendamentoActivity.this, "Cadastro realizado " + agendamentoUsuario.getNomeDoUsuario(), Toast.LENGTH_LONG).show();
+                Toast.makeText(AgendamentoActivity.this, "Agendamento Confirmado " + agendamentoUsuario.getNomeDoUsuario(), Toast.LENGTH_LONG).show();
                 controller.salvar(agendamentoUsuario);
             }
         });
@@ -85,4 +105,6 @@ public class AgendamentoActivity extends AppCompatActivity {
             }
         });
     }
+
+
 }
